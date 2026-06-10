@@ -16,8 +16,6 @@ class NetworkMode(str, Enum):
 class Config(BaseSettings):
     NETWORK_MODE: NetworkMode = NetworkMode.TESTNET
 
-    BOT_TOKEN: SecretStr
-
     APP_HOST: str = "localhost"
     APP_PORT: int = 8000
     BASE_URL: str
@@ -29,18 +27,6 @@ class Config(BaseSettings):
     DATABASE_PASSWORD: SecretStr
     DATABASE_HOST: SecretStr
     DATABASE_PORT: SecretStr
-
-    TON_MASTER_MNEMONICS: SecretStr
-    MASTER_MNEMONICS: SecretStr
-    BNB_RPC_URL: SecretStr
-    ETH_RPC_URL: SecretStr
-    ALCHEMY_NOTIFY_TOKEN: SecretStr
-    ETH_ALCHEMY_WEBHOOK_ID: str
-    ETH_ALCHEMY_WEBHOOK_SECRET: SecretStr
-    BNB_ALCHEMY_WEBHOOK_ID: str
-    BNB_ALCHEMY_WEBHOOK_SECRET: SecretStr
-    TONCONSOLE_API_KEY: SecretStr
-    TONCONSOLE_WEBHOOK_PATH: str = "/webhook/ton"
 
     REDIS_URL: SecretStr
 
